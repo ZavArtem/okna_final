@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Окна Самара - Производство и установка пластиковых окон</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="images/webp" sizes="32x32" href="images/ico.webp">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header>
+        <div class="container header-container">
+
+            <div class="logo-container">
+                <div class="logo-img">ОС</div>
+                <div class="logo-text-container">
+                    <div class="logo-text">ОКНА <span>САМАРА</span></div>
+                    <div class="logo-slogan">Надёжные окна с 2010 года</div>
+                </div>
+            </div>
+
+            <!-- Навигация (десктоп + мобильное меню) -->
+            <nav id="main-nav">
+                <button class="nav-close" id="nav-close" aria-label="Закрыть меню">✕</button>
+                <ul>
+                    <li><a href="#main"      onclick="closeNav()">Главная</a></li>
+                    <li><a href="#about"     onclick="closeNav()">О компании</a></li>
+                    <li><a href="#services"  onclick="closeNav()">Услуги</a></li>
+                    <li><a href="#calculator" onclick="closeNav()">Калькулятор</a></li>
+                    <li><a href="#contacts"  onclick="closeNav()">Контакты</a></li>
+                </ul>
+                <a href="tel:+79179427939" class="nav-phone-mobile">+7 (917) 942-79-39</a>
+            </nav>
+
+            <div class="phone">+7 (917) 942-79-39</div>
+
+            <!-- Кнопка-бургер (только мобильный) -->
+            <button class="burger" id="burger-btn" aria-label="Открыть меню" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero" id="main">
+        <div class="container">
+            <h1>Пластиковые окна в Самаре</h1>
+            <p>Производство и установка качественных окон ПВХ по доступным ценам. Гарантия 5 лет!</p>
+            <a href="#calculator" class="btn">Рассчитать стоимость</a>
+        </div>
+    </section>
+
+    <!-- О КОМПАНИИ -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>О нашей компании</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Мы работаем на рынке Самары более 10 лет и успешно установили более 5000 окон. Используем только качественные материалы от проверенных поставщиков.</p>
+                    <p>Наши специалисты имеют многолетний опыт работы и регулярно проходят обучение.</p>
+                    <ul>
+                        <li>Бесплатный замер</li>
+                        <li>Профессиональный монтаж</li>
+                        <li>Гарантия 5 лет</li>
+                        <li>Рассрочка платежа</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/okno.jfif" alt="Фото наших работ"
+                         onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'padding:40px;color:#999;text-align:center\'>Фото наших работ</div>'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⎙</div>
+                    <h3>Пластиковые окна</h3>
+                    <p>Производство и установка окон ПВХ любой сложности</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⊡</div>
+                    <h3>Балконы и лоджии</h3>
+                    <p>Остекление и отделка балконов под ключ</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⏉</div>
+                    <h3>Остекление коттеджей</h3>
+                    <p>Панорамное остекление для загородных домов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="features">
+        <div class="container">
+            <h2>Почему выбирают нас</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <h3>Качественные материалы</h3>
+                    <p>Работаем с проверенными немецкими и российскими профилями</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⏱</div>
+                    <h3>Сроки от 3 дней</h3>
+                    <p>Быстрое производство и оперативный монтаж</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🛡</div>
+                    <h3>Гарантия 5 лет</h3>
+                    <p>Даем расширенную гарантию на все работы</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💎</div>
+                    <h3>Опытные мастера</h3>
+                    <p>Работают специалисты с опытом от 5 лет</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАЛЬКУЛЯТОР -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <h2>Калькулятор стоимости окон</h2>
+            <div class="calc-container">
+
+                <div class="calc-form">
+                    <div class="form-group">
+                        <label for="windowType">Тип окна:</label>
+                        <select id="windowType">
+                            <option value="standard">Стандартное окно</option>
+                            <option value="balcony">Балконный блок</option>
+                            <option value="cottage">Панорамное окно</option>
+                            <option value="door">Окно-дверь</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="width">Ширина (см):</label>
+                            <input type="number" id="width" placeholder="120" min="50" max="300" value="120">
+                        </div>
+                        <div class="form-group">
+                            <label for="height">Высота (см):</label>
+                            <input type="number" id="height" placeholder="150" min="50" max="300" value="150">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profile">Профиль:</label>
+                        <select id="profile">
+                            <option value="economy">Эконом (Rehau Blitz)</option>
+                            <option value="standard" selected>Стандарт (Rehau Grazio)</option>
+                            <option value="premium">Премиум (Rehau Intelio)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="glass">Стеклопакет:</label>
+                        <select id="glass">
+                            <option value="single">Однокамерный</option>
+                            <option value="double" selected>Двухкамерный</option>
+                            <option value="energy">Энергосберегающий</option>
+                            <option value="triple">Трехкамерный</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Дополнительные опции:</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="montage" checked>
+                            <label for="montage">Монтаж (+15%)</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="slopes">
+                            <label for="slopes">Откосы (+8%)</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="sill">
+                            <label for="sill">Подоконник (+12%)</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="mosquito">
+                            <label for="mosquito">Москитная сетка (+5%)</label>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn" onclick="calculatePrice()"
+                        style="background:#ff7b00; width:100%; font-size:17px; padding:14px;">
+                        Рассчитать стоимость
+                    </button>
+                </div>
+
+                <div class="calc-result">
+                    <h3>Предварительный расчет</h3>
+                    <div class="price-display" id="totalPrice">0 ₽</div>
+
+                    <div class="price-breakdown">
+                        <div class="price-item">
+                            <span>Конструкция окна:</span>
+                            <span id="basePrice">0 ₽</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Профиль:</span>
+                            <span id="profilePrice">0 ₽</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Стеклопакет:</span>
+                            <span id="glassPrice">0 ₽</span>
+                        </div>
+                        <div class="price-item" id="montageItem" style="display:none;">
+                            <span>Монтаж:</span>
+                            <span id="montagePrice">0 ₽</span>
+                        </div>
+                        <div class="price-item" id="slopesItem" style="display:none;">
+                            <span>Откосы:</span>
+                            <span id="slopesPrice">0 ₽</span>
+                        </div>
+                        <div class="price-item" id="sillItem" style="display:none;">
+                            <span>Подоконник:</span>
+                            <span id="sillPrice">0 ₽</span>
+                        </div>
+                        <div class="price-item" id="mosquitoItem" style="display:none;">
+                            <span>Москитная сетка:</span>
+                            <span id="mosquitoPrice">0 ₽</span>
+                        </div>
+                        <div class="price-total">
+                            <span>Итого:</span>
+                            <span id="finalPrice">0 ₽</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:20px; padding:15px; background:#f8f9fa; border-radius:5px;">
+                        <p style="margin-bottom:10px; font-size:14px;">
+                            💡 <strong>
+                                <a href="https://t.me/rdevhkg"
+                                   style="color:#2c7fb8; text-decoration:none;"
+                                   target="_blank">
+                                    Точную стоимость уточняйте у менеджера
+                                </a>
+                            </strong>
+                        </p>
+                        <button class="btn" onclick="showContactForm()"
+                            style="width:100%; margin-top:10px; padding:14px; font-size:16px;">
+                            Заказать бесплатный замер
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Наши контакты</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+7 (917) 942-79-39</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉</span>
+                        <span>info@okna-samara.ru</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>г. Самара, ул. Московская, 123</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">👤</span>
+                        <span>Заводчиков Артём</span>
+                    </div>
+                </div>
+                <div class="map">
+                    <div class="map-placeholder">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1572.2197157177898!2d50.13257382119219!3d53.2108337413843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41661ef472820121%3A0x38e217b7efe1c058!2z0YPQuy4g0J7RgdC40L_QtdC90LrQviwgMjAsINCh0LDQvNCw0YDQsCwg0KHQsNC80LDRgNGB0LrQsNGPINC-0LHQuy4sIDQ0MzExMA!5e0!3m2!1sru!2sru!4v1762449469129!5m2!1sru!2sru"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <div class="footer-logo-img">ОС</div>
+                <div class="logo-text">ОКНА <span>САМАРА</span></div>
+            </div>
+            <p>© 2026 Окна Самара. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Бургер-меню
+        function toggleNav() {
+            const nav = document.getElementById('main-nav');
+            const btn = document.getElementById('burger-btn');
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+            document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+        }
+
+        function closeNav() {
+            const nav = document.getElementById('main-nav');
+            const btn = document.getElementById('burger-btn');
+            nav.classList.remove('open');
+            btn.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('nav-close').addEventListener('click', closeNav);
+
+        // Закрытие меню по клику вне его
+        document.getElementById('main-nav').addEventListener('click', function(e) {
+            if (e.target === this) closeNav();
+        });
+    </script>
+
+</body>
+</html>
